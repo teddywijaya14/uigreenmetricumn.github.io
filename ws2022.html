@@ -1,0 +1,149 @@
+<html>
+<head>
+    <title>WS 2022</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+    <meta charset="utf-8" />
+	<meta name="viewport" content="initial-scale=1.0; maximum-scale=1.0; width=device-width;">
+</head>
+<body>
+
+<nav class="menu">
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="#">Tahun</a>
+        <ul class="dropdown">
+            <li><a href="2021.html">2021</a></li>
+            <li><a href="2022.html">2022</a></li>
+        </ul>
+        </li>
+        <a href="https://www.umn.ac.id/">
+          <img class = "logoumn" src="logoumn.png" height="50px">
+          </a>
+      </ul>
+    </nav>
+    <img src="wsrank2.JPG" width="120" height="80" >
+    <div class="table-title">
+        <h3>Waste (WS)</h3>
+        </div>
+        <table class="table-fill">
+        <thead>
+        <tr>
+        <th class="text-center">Category</th>
+        <th class="text-center">Point</th>
+        <th class="text-center">Maximum Point</th>
+        <th class="text-center">Percentage</th>
+        </tr>
+        </thead>
+        <tbody class="table-hover">
+        <tr>
+        <td class="text-center">Waste (WS)</td>
+        <td class="text-center">1,425 </td>
+        <td class="text-center">1800</td>
+        <td class="text-center">79.17 %</td>
+        </tr>
+        </tbody>
+        </table>
+        <br>
+        <br>
+            <section>
+                <div class="chartBox2">
+                    <canvas id="myChart"></canvas>
+                  </div>
+                </div>
+                <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+                <script>
+                // setup 
+                const data = {
+                  labels: ['WS.1','WS.2','WS.3','WS.4','WS.5','WS.6'],
+                  datasets: [{
+                label: 'Maximum Point',
+                data: [ 300,300,300,300,300,300],
+              
+                backgroundColor: [
+                  '#006f91',
+                ],
+                borderColor: [
+                  'rgba(0, 0, 0, 0.2)',
+                ],
+
+                borderWidth: 1,
+              },{
+                    label: 'Point',
+                    data: [ 225,300,225,225,225,225],
+                  
+                    backgroundColor: [
+                  '#afecff',
+                ],
+                borderColor: [
+                  'rgba(0, 0, 0, 0.2)',
+                ],
+                    borderWidth: 1,
+                  }]
+                };
+            
+                // config 
+                const config = {
+                  type: 'bar',
+                  data,
+                  options: {
+                    parsing:{
+                        key: 'amount.point'
+                      }
+                    }
+                };
+            
+                // render init block
+                const ctx = document.getElementById('myChart');
+                const myChart = new Chart(
+                  ctx,
+                  config
+                );
+    
+                </script>
+            <div class = "content">
+        <table class="table-fill">
+        <thead>
+        <tr>
+        <th class="text-center">No</th>
+        <th class="text-center">Indicator</th>
+        <th class="text-center">Score</th>
+        </tr>
+        </thead>
+        <tbody class="table-hover">
+        <tr>
+        <td class="text-center">WS.1 </td>
+        <td class="text-left">Recycling program for university waste </td>
+        <td class="text-center">225</td>
+        </tr>
+        <tr>
+        <td class="text-center">WS.2 </td>
+        <td class="text-left">Program to reduce the use of paper and plastic in campus</td>
+        <td class="text-center">300</td>
+        </tr>
+        <tr>
+        <td class="text-center">WS.3 </td>
+        <td class="text-left">Organic waste treatment  </td>
+        <td class="text-center">225</td>
+        </tr>
+        <tr>
+        <td class="text-center">WS.4 </td>
+        <td class="text-left">Inorganic waste treatment </td>
+        <td class="text-center">225</td>
+        </tr>
+        <tr>
+        <td class="text-center">WS.5 </td>
+        <td class="text-left"> Toxic waste treatment</td>
+        <td class="text-center">225</td>
+        </tr>
+        <tr>
+        <td class="text-center">WS.6 </td>
+        <td class="text-left"> Sewerage disposal </td>
+        <td class="text-center">225</td>
+        </tr>
+        </tbody>
+        </table>
+    </div>
+    </section>
+</body>
+</html>

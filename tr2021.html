@@ -1,0 +1,158 @@
+<html>
+<head>
+    <title>TR 2021</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+    <meta charset="utf-8" />
+	<meta name="viewport" content="initial-scale=1.0; maximum-scale=1.0; width=device-width;">
+</head>
+<body>
+
+<nav class="menu">
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="#">Tahun</a>
+        <ul class="dropdown">
+            <li><a href="2021.html">2021</a></li>
+            <li><a href="2022.html">2022</a></li>
+        </ul>
+        </li>
+        <a href="https://www.umn.ac.id/">
+          <img class = "logoumn" src="logoumn.png" height="50px">
+          </a>
+      </ul>
+    </nav>
+    <img src="trrank.JPG" width="120" height="80" >
+    <div class="table-title">
+        <h3>Transportation (TR)</h3>
+        </div>
+        <table class="table-fill">
+        <thead>
+        <tr>
+        <th class="text-center">Category</th>
+        <th class="text-center">Point</th>
+        <th class="text-center">Maximum Point</th>
+        <th class="text-center">Percentage</th>
+        </tr>
+        </thead>
+        <tbody class="table-hover">
+        <tr>
+        <td class="text-center">Transportation (TR)</td>
+        <td class="text-center">1,275 </td>
+        <td class="text-center">1800</td>
+        <td class="text-center">70.83 %</td>
+        </tr>
+        </tbody>
+        </table>
+        <br>
+        <br>
+        <section>
+            <div class="chartBox2">
+                <canvas id="myChart"></canvas>
+              </div>
+            </div>
+            <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+            <script>
+            // setup 
+            const data = {
+              labels: ['TR.1','TR.2','TR.3','TR.4','TR.5','TR.6','TR.7','TR.8'],
+              datasets: [{
+                label: 'Maximum Point',
+                data: [ 200,300,200,200,200,200,200,300],
+              
+                backgroundColor: [
+                  '#006f91',
+                ],
+                borderColor: [
+                  'rgba(0, 0, 0, 0.2)',
+                ],
+                borderWidth: 1,
+              },{
+                label: 'Point',
+                data: [ 100,225,150,200,0,100,200,300],
+              
+                backgroundColor: [
+                  '#afecff',
+                ],
+                borderColor: [
+                  'rgba(0, 0, 0, 0.2)',
+                ],
+                borderWidth: 1,
+              }]
+            };
+        
+            // config 
+            const config = {
+              type: 'bar',
+              data,
+              options: {
+                parsing:{
+                    key: 'amount.point'
+                  }
+                }
+            };
+        
+            // render init block
+            const ctx = document.getElementById('myChart');
+            const myChart = new Chart(
+              ctx,
+              config
+            );
+
+            </script>
+            <div class = "content">
+        <table class="table-fill">
+        <thead>
+        <tr>
+        <th class="text-center">No</th>
+        <th class="text-center">Indicator</th>
+        <th class="text-center">Score</th>
+        </tr>
+        </thead>
+        <tbody class="table-hover">
+        <tr>
+        <td class="text-center">TR.1 </td>
+        <td class="text-left">The ratio of total vehicles (cars and motorcycles) divided by total campus population</td>
+        <td class="text-center">100</td>
+        </tr>
+        <tr>
+        <td class="text-center">TR.2 </td>
+        <td class="text-left">Shuttle services </td>
+        <td class="text-center">225</td>
+        </tr>
+        <tr>
+        <td class="text-center">TR.3 </td>
+        <td class="text-left">Zero Emission Vehicles (ZEV) policy on campus</td>
+        <td class="text-center">150</td>
+        </tr>
+        <tr>
+        <td class="text-center">TR.4 </td>
+        <td class="text-left">The ratio of Zero Emission Vehicles (ZEV) divided by total campus population</td>
+        <td class="text-center">200</td>
+        </tr>
+        <tr>
+        <td class="text-center">TR.5 </td>
+        <td class="text-left">Ratio of parking area to total campus area</td>
+        <td class="text-center">0</td>
+        </tr>
+        <tr>
+        <td class="text-center">TR.6 </td>
+        <td class="text-left">Transportation program designed to limit or decrease the parking area on campus for the last 3 years</td>
+        <td class="text-center">100</td>
+        </tr>
+        <tr>
+        <td class="text-center">TR.7</td>
+        <td class="text-left">Number of transportation initiatives to decrease private vehicles on campus</td>
+        <td class="text-center">200</td>
+        </tr>
+        <tr>
+        <td class="text-center">TR.8 </td>
+        <td class="text-left">Pedestrian policy on campus</td>
+        <td class="text-center">300</td>
+        </tr>
+        </tbody>
+        </table>
+        </div>
+        </section>  
+</body>
+</html>

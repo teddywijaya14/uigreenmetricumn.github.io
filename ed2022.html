@@ -1,0 +1,173 @@
+<html>
+<head>
+    <title>ED 2022</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+    <meta charset="utf-8" />
+	<meta name="viewport" content="initial-scale=1.0; maximum-scale=1.0; width=device-width;">
+</head>
+<body>
+
+<nav class="menu">
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="#">Tahun</a>
+        <ul class="dropdown">
+            <li><a href="2021.html">2021</a></li>
+            <li><a href="2022.html">2022</a></li>
+        </ul>
+        </li>
+        <a href="https://www.umn.ac.id/">
+          <img class = "logoumn" src="logoumn.png" height="50px">
+          </a>
+      </ul>
+    </nav>
+    <img src="edrank2.JPG" width="120" height="80" >
+    <div class="table-title">
+        <h3>Education (ED)</h3>
+        </div>
+        <table class="table-fill">
+        <thead>
+        <tr>
+        <th class="text-center">Category</th>
+        <th class="text-center">Point</th>
+        <th class="text-center">Maximum Point</th>
+        <th class="text-center">Percentage</th>
+        </tr>
+        </thead>
+        <tbody class="table-hover">
+        <tr>
+        <td class="text-center">Education (ED)</td>
+        <td class="text-center">1,475 </td>
+        <td class="text-center">1800</td>
+        <td class="text-center">81.94 %</td>
+        </tr>
+        </tbody>
+        </table>
+        <br>
+        <br>
+        <section>
+            <div class="chartBox2">
+                <canvas id="myChart"></canvas>
+              </div>
+            </div>
+            <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+            <script>
+            // setup 
+            const data = {
+              labels: ['ED.1','ED.2','ED.3','ED.4','ED.5','ED.6','ED.7','ED.8','ED.9','ED.10','ED.11'],
+              datasets: [{
+                label: 'Maximum Point',
+                data: [ 300,200,200,200,200,200,100,100,100,100,100],
+              
+                backgroundColor: [
+                  '#006f91',
+                ],
+                borderColor: [
+                  'rgba(0, 0, 0, 0.2)',
+                ],
+                borderWidth: 1,
+              },{
+                label: 'Point',
+                data: [ 225,200,100,150,150,200,100,100,100,100,50],
+              
+                backgroundColor: [
+                  '#afecff',
+                ],
+                borderColor: [
+                  'rgba(0, 0, 0, 0.2)',
+                ],
+                borderWidth: 1,
+              }]
+            };
+        
+            // config 
+            const config = {
+              type: 'bar',
+              data,
+              options: {
+                parsing:{
+                    key: 'amount.point'
+                  }
+                }
+            };
+        
+            // render init block
+            const ctx = document.getElementById('myChart');
+            const myChart = new Chart(
+              ctx,
+              config
+            );
+
+            </script>
+            <div class = "content">
+        <table class="table-fill">
+        <thead>
+        <tr>
+        <th class="text-center">No</th>
+        <th class="text-center">Indicator</th>
+        <th class="text-center">Score</th>
+        </tr>
+        </thead>
+        <tbody class="table-hover">
+        <tr>
+        <td class="text-center">ED.1 </td>
+        <td class="text-left">The ratio of sustainability courses towards total courses/modules </td>
+        <td class="text-center">225</td>
+        </tr>
+        <tr>
+        <td class="text-center">ED.2 </td>
+        <td class="text-left">The ratio of sustainability research funding towards total research funding </td>
+        <td class="text-center">200</td>
+        </tr>
+        <tr>
+        <td class="text-center">ED.3 </td>
+        <td class="text-left">Sustainability publications </td>
+        <td class="text-center">100</td>
+        </tr>
+        <tr>
+        <td class="text-center">ED.4 </td>
+        <td class="text-left">Sustainability events </td>
+        <td class="text-center">150</td>
+        </tr>
+        <tr>
+        <td class="text-center">ED.5 </td>
+        <td class="text-left">Sustainability student organizations</td>
+        <td class="text-center">150</td>
+        </tr>
+        <tr>
+        <td class="text-center">ED.6 </td>
+        <td class="text-left">Sustainability websites </td>
+        <td class="text-center">200</td>
+        </tr>
+        <tr>
+        <td class="text-center">ED.7</td>
+        <td class="text-left">Sustainability report </td>
+        <td class="text-center">100</td>
+        </tr>
+        <tr>
+        <td class="text-center">ED.8</td>
+        <td class="text-left">Sustainability report </td>
+        <td class="text-center">100</td>
+        </tr>
+        <tr>
+        <td class="text-center">ED.9</td>
+        <td class="text-left">Sustainability report </td>
+        <td class="text-center">100</td>
+        </tr>
+        <tr>
+        <td class="text-center">ED.10</td>
+        <td class="text-left">Sustainability report </td>
+        <td class="text-center">100</td>
+        </tr>
+        <tr>
+        <td class="text-center">ED.11</td>
+        <td class="text-left">Sustainability report </td>
+        <td class="text-center">50</td>
+        </tr>
+        </tbody>
+        </table>
+        </div>
+        </section>
+</body>
+</html>

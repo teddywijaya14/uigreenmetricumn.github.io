@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <title>UI Greenmetric</title>
+
+      <link rel="stylesheet" href="style.css">
+   </head>
+   <body>
+    <nav class="menu">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="#">Tahun</a>
+            <ul class="dropdown">
+                <li><a href="2021.html">2021</a></li>
+                <li><a href="2022.html">2022</a></li>
+            </ul>
+            </li>
+            <a href="https://www.umn.ac.id/">
+              <img class = "logoumn" src="logoumn.png" height="50px">
+              </a>
+          </ul>
+        </nav>
+        <div class="chartMenu">
+            <p>UI Greenmetric Tahun 2021</p>
+            <br>
+            <h1>
+              <font color="black">World Ranking and Nasional Ranking</font><br>
+            </h1>
+              <p>
+              <img src="logodunia.png" width="110" height="80" >
+              <img src="wrank.JPG" width="110" height="80" >
+              <img src="sirank.JPG" width="110" height="80" >
+              <img src="ecrank.JPG" width="110" height="80" >
+              <img src="wsrank.JPG" width="110" height="80" >
+              <img src="wrrank.JPG" width="110" height="80" >
+              <img src="trrank.JPG" width="110" height="80" >
+              <img src="edrank.JPG" width="110" height="80" >
+              </p>
+              <p>
+                <img src="logoindo.png" width="110" height="80" >
+                <img src="wi2rank.JPG" width="110" height="80" >
+                <img src="si2rank.JPG" width="110" height="80" >
+                <img src="eci2rank.JPG" width="110" height="80" >
+                <img src="wsi2rank.JPG" width="110" height="80" >
+                <img src="wri2rank.JPG" width="110" height="80" >
+                <img src="tri2rank.JPG" width="110" height="80" >
+                <img src="edi2rank.JPG" width="110" height="80" >
+              </p>
+          </div>
+          <div class="img_main">
+            <div class="container2">
+                <div class="carousel-caption relative">
+                    <div class="bg_white">
+                            <h1>UI Greenmetric UMN</h1>
+                            <p>Universitas Multimedia merupakan salah satu Universitas yang masuk kedalam UI Greenmetric. Pada tahun 2021 Universitas Multimedia Nusantara menduduki ranking 146 untuk dunia dan 14 untuk ranking nasional.</p>
+                            <p>Dalam UI Greenmetric terdapat 6 kriteria yang menjadi penilaian yaitu Setting and Infrastructure (SI), Energy and Climate Change (EC), Waste (WS), Water (WR), Transportation (TR),dan Education (ED). Dapat dilihat pada pie chart dibawah untuk SI memiliki point sebesar 1100, EC dengan point 1350, WS dengan point 1425, WR dengan point 950, TR dengan point 1275, dan ED dengan point 1475</p></p>
+            <br>
+              <div class="chartBox">
+              <div align="center"><h2>Verified Data 2021</h2></div>
+              <canvas id="myChart"></canvas>
+            </div>
+          </div>
+          <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+          <script>
+          // setup 
+          const data = {
+            labels: ['SI','EC','WS','WR','TR','ED'],
+            datasets: [{
+              label: 'Point',
+              data: [ 
+                  {dataa: 'SI', href:'si2021.html', amount:{point:1100,
+                      maximumpoint:1500}},
+                  {dataa: 'EC', href:'ec2021.html', amount:{point:1350,
+                      maximumpoint:2100}},
+                  {dataa: 'WS', href:'ws2021.html', amount:{point:1425,
+                      maximumpoint:1800}},
+                  {dataa: 'WR', href:'wr2021.html', amount:{point:950,
+                      maximumpoint:1000}},
+                  {dataa: 'TR', href:'tr2021.html', amount:{point:1275,
+                      maximumpoint:1800}},
+                  {dataa: 'ED', href:'ed2021.html', amount:{point:1475,
+                      maximumpoint:1800}},
+      
+              ],
+            
+              backgroundColor: [
+                'rgba(255, 26, 104, 0.2)',
+                'rgba(54, 162, 235, 0.2)',
+                'rgba(255, 206, 86, 0.2)',
+                'rgba(75, 192, 192, 0.2)',
+                'rgba(153, 102, 255, 0.2)',
+                'rgba(255, 159, 64, 0.2)',
+              ],
+              borderColor: [
+                'rgba(255, 26, 104, 1)',
+                'rgba(54, 162, 235, 1)',
+                'rgba(255, 206, 86, 1)',
+                'rgba(75, 192, 192, 1)',
+                'rgba(153, 102, 255, 1)',
+                'rgba(255, 159, 64, 1)',
+              ],
+              borderWidth: 1
+            }]
+          };
+      
+          // config 
+          const config = {
+            type: 'pie',
+            data,
+            options: {
+              parsing:{
+                  key: 'amount.point'
+                }
+              }
+          };
+      
+          // render init block
+          const ctx = document.getElementById('myChart');
+          const myChart = new Chart(
+            ctx,
+            config
+          );
+      
+          function pieLink(click){
+              //console.log(click)
+              const clickedInfo = myChart.getElementsAtEventForMode(click, 'nearest', {intersect : true}, true);
+              //console.log(clickedInfo)
+              if(clickedInfo.length){
+                  const pieSlice = clickedInfo[0]
+                  console.log(pieSlice.datasetIndex)
+                  console.log(pieSlice.index)
+                  const link = myChart.data.datasets[pieSlice.datasetIndex].data[pieSlice.index].href;
+                  //location.href = link;
+                  window.open (link);
+              }
+       
+          }
+      
+          ctx.onclick = pieLink;
+          </script>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+
+</html>

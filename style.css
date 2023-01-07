@@ -1,0 +1,491 @@
+.box2{
+    width:600px;
+    height:235px;
+    background:rgb(255, 255, 255);
+    position: relative;
+    margin: 0 auto;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Source Sans Pro';
+    background:rgba(255, 255, 255, 0.2);
+    margin:0;
+    color:rgb(0, 0, 0);
+}
+
+
+
+
+
+.menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+
+.menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #004f68;
+  }
+  
+.menu li {
+    float: left;
+  }
+  
+.menu li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+
+.menu li a:hover {
+    background-color: rgb(17, 17, 17);
+  }
+
+.menu li .dropdown {
+    display: none;
+  }
+
+.menu li:hover .dropdown {
+    display: block;
+    background: #004f68;
+    position:absolute;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+  }
+  .chartMenu {
+    width: 100%;
+    height: 40px;
+    background: #006f91;
+    color:  white;
+    text-align: center;
+    margin: 0 auto;
+    top: 0 auto;
+    left: 0 auto;
+    right: 0 auto;
+  }
+  .chartMenu p {
+    padding: 10px;
+    font-size: 20px;
+  }
+  .chartBox {
+    width: 400px;
+    padding: 20px;
+    border-radius: 20px;
+    border: solid 3px #006f91;
+    background: white;
+    margin: 0 auto;
+  }
+
+  div.table-title {
+    display: block;
+   margin: auto;
+   max-width: 600px;
+   padding:5px;
+   width: 100%;
+ }
+ 
+ .table-title h3 {
+    color: #000000;
+    font-size: 30px;
+    font-weight: 400;
+    font-style:normal;
+    font-family: "Roboto", helvetica, arial, sans-serif;
+    text-shadow: -1px -1px 1px rgba(0, 0, 0, 0.1);
+    text-transform:uppercase;
+    text-align: center;
+ }
+ 
+ 
+ /*** Table Styles **/
+ 
+ .table-fill {
+   background: white;
+   border-radius:3px;
+   border-collapse: collapse;
+   height: 10px;
+   margin: auto;
+   max-width: 700px;
+   padding:5px;
+   width: 100%;
+   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+   animation: float 5s infinite;
+ }
+  
+ th {
+   color:#D5DDE5;;
+   background:#004f68;
+   border-bottom:4px solid #9ea7af;
+   border-right: 1px solid #343a45;
+   font-size:18px;
+   font-weight: 100;
+   padding:24px;
+   text-align:left;
+   text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+   vertical-align:middle;
+ }
+ 
+ th:first-child {
+   border-top-left-radius:3px;
+ }
+  
+ th:last-child {
+   border-top-right-radius:3px;
+   border-right:none;
+ }
+   
+ tr {
+   border-top: 1px solid #C1C3D1;
+   border-bottom: 1px solid #C1C3D1;
+   color:#666B85;
+   font-size:16px;
+   font-weight:normal;
+   text-shadow: 0 1px 1px rgba(256, 256, 256, 0.1);
+ }
+  
+ tr:hover td {
+   background:#4E5066;
+   color:#FFFFFF;
+   border-top: 1px solid #22262e;
+ }
+  
+ tr:first-child {
+   border-top:none;
+ }
+ 
+ tr:last-child {
+   border-bottom:none;
+ }
+
+ tr:last-child td:first-child {
+   border-bottom-left-radius:3px;
+ }
+  
+ tr:last-child td:last-child {
+   border-bottom-right-radius:3px;
+ }
+  
+ td {
+   background:#FFFFFF;
+   padding:10px;
+   text-align:left;
+   vertical-align:middle;
+   font-weight:300;
+   font-size:18px;
+   text-shadow: -1px -1px 1px rgba(0, 0, 0, 0.1);
+   border-right: 1px solid #C1C3D1;
+ }
+ 
+ td:last-child {
+   border-right: 0px;
+ }
+ 
+ th.text-left {
+   text-align: left;
+ }
+ 
+ th.text-center {
+   text-align: center;
+ }
+ 
+ th.text-right {
+   text-align: right;
+ }
+ 
+ td.text-left {
+   text-align: left;
+ }
+ 
+ td.text-center {
+   text-align: center;
+ }
+ 
+ td.text-right {
+   text-align: right;
+ }
+
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+section{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: fit-content;
+    width: fit-content;
+    margin: 0 auto;
+    border-radius: 12px
+}
+.image{
+    background-color: #ffffff;
+    display: flex;
+    border-radius: 12px 0 0 12px;
+}
+.image img{
+height:40vh;
+margin:auto;
+}
+.content{
+    background-color: #004f68;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 0  12px 12px 0;
+    color: #fff;
+    width: 100%;
+}
+.content h2{
+    text-transform: uppercase;
+    font-size: 36px;
+    letter-spacing: 6px;
+    opacity: 0.9;
+}
+.content span{
+    height: 0.5px;
+    width: 300px;
+    background: #777;
+    margin: 30px 0;
+}
+.content p{
+    padding-bottom: 15px;
+    font-weight: 300;
+    width: 70%;
+    text-align: justify;
+    margin: 0 auto;
+    line-height: 1.7;
+}
+
+.vertical-line{
+    height: 30px;
+    width: 10px;
+    background: #C850C0;
+    margin: 0 auto;
+}
+.chartBox2 {
+  width: 580px;
+  padding: 20px;
+  border-radius: 10px;
+  border: solid 3px rgb(0, 0, 0);
+  margin: 0 auto;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.content2{
+  background-color: #004f68;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 0  12px 12px 0;
+  color: #fff;
+  display: flex;
+  width: 100%;
+}
+
+.img_main {
+  background: url(https://www.umn.ac.id/wp-content/uploads/2022/07/Keempat-Gedung-Kampus-Universitas-Multimedia-Nusantara.jpg);
+  background-size: 100% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: fit-content;
+  display:grid;
+  justify-content: center;
+  align-items: center;
+}
+.container2 {
+  width: 80%;
+  margin:auto;
+}
+
+@import url(font-awesome.min.css);
+@import url(owl.carousel.min.css);
+
+.bg_white {
+  background: #fffffff0;
+  padding: 50px 50px 28px 50px;
+  margin-top: 270px;
+}
+
+.img_main .bg_white h1 {
+  color: #141111;
+  font-size: 70px;
+  line-height: 84px;
+  font-weight: 700;
+  padding-bottom: 22px;
+  text-align: center;
+}
+
+.img_main .bg_white p {
+  color: #2d2d2d;
+  line-height: 30px;
+  font-weight: 500;
+  padding-bottom: 0px;
+  text-align: justify;
+}
+
+.relative {
+  position: static;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.img_main2 {
+  background: url(https://www.umn.ac.id/wp-content/uploads/2022/07/Keempat-Gedung-Kampus-Universitas-Multimedia-Nusantara.jpg);
+  background-size: 100% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 1034px;
+  display: flex;
+}
+.img_main2 .bg_white h1 {
+  color: #141111;
+  font-size: 70px;
+  line-height: 84px;
+  font-weight: 700;
+  padding-bottom: 22px;
+  padding-top: 22px;
+}
+
+.img_main2 .bg_white p {
+  color: #2d2d2d;
+  line-height: 30px;
+  font-weight: 500;
+  padding-bottom: 0px;
+}
+
+img.logoumn {
+  float: right;
+  margin: 10px;
+  left: 900px;
+}
+
+img.logoweb {
+height: 3vh;
+}
+
+.img_main3 {
+  background: url(https://www.umn.ac.id/wp-content/uploads/2022/07/Keempat-Gedung-Kampus-Universitas-Multimedia-Nusantara.jpg);
+  background-size: 100% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 1034px;
+  display:grid;
+  justify-content: center;
+  align-items: center;
+}
+.img_main3 .bg_white h1 {
+  color: #141111;
+  font-size: 70px;
+  line-height: 84px;
+  font-weight: 700;
+  padding-bottom: 22px;
+  padding-top: 22px;
+}
+
+.img_main3 .bg_white p {
+  color: #2d2d2d;
+  line-height: 30px;
+  font-weight: 500;
+  padding-bottom: 0px;
+}
+
+* {
+  padding:0;
+  margin:0;
+}
+ul,ol {
+  list-style-type: none;
+}
+.container5 {
+  margin: auto;
+  position: relative;
+  overflow: hidden;
+}
+.container5, ul.slide li img{
+  width:500px;
+  height: 300px;
+}ul.slide {
+  position: absolute;
+  display: block;
+  width:300%;
+}
+ul.slide li {
+  float: left;
+  display: inline-block;
+  -webkit-transition: -webkit-transform 2000ms;
+  -moz-transition: -moz-transform 2000ms;
+  transition: -webkit-transform 2000ms, transform 2000ms;
+}
+ul.slide li.slide-1 {
+  left: 0%;
+}
+ul.slide li.slide-2 {
+  left: 100%;
+}
+#nav-1:checked ~ ul.slide li{
+  transform: translateX(0%);
+}
+#nav-2:checked ~ ul.slide li{
+  transform: translateX(-100%);
+}
+.radio-nav { 
+  display: none;
+}
+.nav-arrow {
+  position: absolute;
+  top:45%;
+  width:50px;
+  height: 50px;
+}
+.nav-next {
+  right:10px;
+}
+.nav-prev {
+  left:10px;
+}
+.nav-arrow label {
+  -webkit-transition:all 0.3s;
+  -moz-transition:all 0.3s;
+  transition:all 0.3s;
+  background-color: rgba(0,0,0,0.3);
+  color: #fff;
+  border-radius: 50%;
+  display: block;
+  position: absolute;
+  padding:15px 20px;
+  cursor: pointer;
+  z-index: 1;
+  opacity: 0;
+  font-weight: bold;
+  line-height: 1;
+}
+.container5:hover .nav-arrow label{
+  background-color: rgba(0,0,0,0.7);
+}
+  #nav-1:checked ~ .nav-next label.nav-2,
+  #nav-2:checked ~ .nav-prev label.nav-1,
+  #nav-1:checked ~ .nav-prev label.nav-2,
+  #nav-2:checked ~ .nav-next label.nav-1 {
+  z-index: 2;
+  opacity: 1;
+}

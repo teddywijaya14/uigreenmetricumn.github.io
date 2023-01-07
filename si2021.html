@@ -1,0 +1,173 @@
+<html>
+<head>
+    <title>SI 2021</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+    <meta charset="utf-8" />
+	<meta name="viewport" content="initial-scale=1.0; maximum-scale=1.0; width=device-width;">
+</head>
+<body>
+
+<nav class="menu">
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="#">Tahun</a>
+        <ul class="dropdown">
+            <li><a href="2021.html">2021</a></li>
+            <li><a href="2022.html">2022</a></li>
+        </ul>
+        </li>
+        <a href="https://www.umn.ac.id/">
+          <img class = "logoumn" src="logoumn.png" height="50px">
+          </a>
+      </ul>
+    </nav>
+    <img src="sirank.JPG" width="120" height="80" >
+    <div class="table-title">
+        <h3>Setting and Infrastructure (SI)</h3>
+        </div>
+        <table class="table-fill">
+        <thead>
+        <tr>
+        <th class="text-center">Category</th>
+        <th class="text-center">Point</th>
+        <th class="text-center">Maximum Point</th>
+        <th class="text-center">Percentage</th>
+        </tr>
+        </thead>
+        <tbody class="table-hover">
+        <tr>
+        <td class="text-center">Setting and Infrastructure (SI)</td>
+        <td class="text-center">1,100 </td>
+        <td class="text-center">1500</td>
+        <td class="text-center">73.33 %</td>
+        </tr>
+        </tbody>
+        </table>
+        <br>
+        <br>
+        <section>
+            <div class="chartBox2">
+                <canvas id="myChart"></canvas>
+              </div>
+            </div>
+            <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+            <script>
+            // setup 
+            const data = {
+              labels: ['SI.1','SI.2','SI.3','SI.4','SI.5','SI.6','SI.7','SI.8','SI.9','SI.10','SI.11'],
+              datasets: [{
+                label: 'Maximum Point',
+                data: [ 200,100,200,100,200,200,100,100,100,100,100],
+              
+                backgroundColor: [
+                  '#006f91',
+                ],
+                borderColor: [
+                  'rgba(0, 0, 0, 0.2)',
+                ],
+                borderWidth: 1,
+              },{
+                label: 'Point',
+                data: [ 100,50,200,75,150,150,75,100,75,75,50],
+              
+                backgroundColor: [
+                  '#afecff',
+                ],
+                borderColor: [
+                  'rgba(0, 0, 0, 0.2)',
+                ],
+                borderWidth: 1,
+              }]
+            };
+        
+            // config 
+            const config = {
+              type: 'bar',
+              data,
+              options: {
+                parsing:{
+                    key: 'amount.point'
+                  }
+                }
+            };
+        
+            // render init block
+            const ctx = document.getElementById('myChart');
+            const myChart = new Chart(
+              ctx,
+              config
+            );
+
+            </script>
+            <div class = "content2">
+        <table class="table-fill">
+        <thead>
+        <tr>
+        <th class="text-center">No</th>
+        <th class="text-center">Indicator</th>
+        <th class="text-center">Score</th>
+        </tr>
+        </thead>
+        <tbody class="table-hover">
+        <tr>
+        <td class="text-center">SI.1 </td>
+        <td class="text-left">The ratio of open space area towards total area </td>
+        <td class="text-center">100</td>
+        </tr>
+        <tr>
+        <td class="text-center">SI.2 </td>
+        <td class="text-left">Area on campus covered in forest </td>
+        <td class="text-center">50</td>
+        </tr>
+        <tr>
+        <td class="text-center">SI.3 </td>
+        <td class="text-left">Area on campus covered in planted vegetation </td>
+        <td class="text-center">200</td>
+        </tr>
+        <tr>
+        <td class="text-center">SI.4 </td>
+        <td class="text-left">Area on campus for water absorbance </td>
+        <td class="text-center">75</td>
+        </tr>
+        <tr>
+        <td class="text-center">SI.5 </td>
+        <td class="text-left">The ratio of open space area divided campus population</td>
+        <td class="text-center">150</td>
+        </tr>
+        <tr>
+        <td class="text-center">SI.6 </td>
+        <td class="text-left">University budget for sustainability effort </td>
+        <td class="text-center">150</td>
+        </tr>
+        <tr>
+        <td class="text-center">SI.7</td>
+        <td class="text-left">Percentage of operation and maintenance activities of building during Covid-19 pandemic </td>
+        <td class="text-center">75</td>
+        </tr>
+        <tr>
+        <td class="text-center">SI.8 </td>
+        <td class="text-left">Campus facilities for disabled, special needs and or maternity care</td>
+        <td class="text-center">100</td>
+        </tr>
+        <tr>
+        <td class="text-center">SI.9 </td>
+        <td class="text-left">Security and safety facilities </td>
+        <td class="text-center">75</td>            
+        </tr>
+        <tr>
+        <td class="text-center">SI.10 </td>
+        <td class="text-left">Health infrastructure facilities for students, academics and administrative staff’s wellbeing </td>
+        <td class="text-center">75</td> 
+        </tr>
+        <tr>
+        <td class="text-center">SI.11 </td>
+        <td class="text-left">Conservation: plant, animal and wildlife, genetic resources for food and agriculture secured in either medium or long-term conservation facilities </td>
+        <td class="text-center">50</td>      
+        </tr>
+        </tbody>
+        </table>
+    </div>
+    </section>
+</body>
+</html>
